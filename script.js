@@ -7,3 +7,10 @@ const computerScoreText = document.getElementById("computerScore");
 
 let playerScore = 0;
 let computerScore = 0;
+
+const choices = ["rock", "paper", "scissors"];
+
+function getComputerChoice() {
+  let choice = Math.floor(Math.random() * 3);
+  return choices[choice];
+}
