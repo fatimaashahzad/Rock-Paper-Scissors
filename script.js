@@ -34,3 +34,15 @@ function playRound(playerChoice) {
     computerScoreText.textContent = computerScore;
   }
 }
+
+rockButton.onclick = function() {
+  playRound("rock");
+};
+
+paperButton.onclick = function() {
+  playRound("paper");
+};
+
+scissorsButton.onclick = function() {
+  playRound("scissors");
+};
