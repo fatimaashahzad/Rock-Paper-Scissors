@@ -9,3 +9,17 @@ h1 {
   font-weight: bold;
   color: #202e18;
 }
+button {
+    padding: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: #b5cbb0;
+    color: #1a2415;
+}
+button:hover {
+  background-color: #9bb896;
+}
