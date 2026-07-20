@@ -23,3 +23,13 @@ button {
 button:hover {
   background-color: #9bb896;
 }
+.scoreboard {
+  font-size: 20px;
+  margin: 20px 0;
+}
+#result {
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #3e5e38;
+}
