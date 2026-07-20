@@ -14,3 +14,23 @@ function getComputerChoice() {
   let choice = Math.floor(Math.random() * 3);
   return choices[choice];
 }
+
+function playRound(playerChoice) {
+  let computerChoice = getComputerChoice();
+
+  if (playerChoice === computerChoice) {
+    resultText.textContent = "It's a tie!";
+  } 
+  else if ((playerChoice=="rock" && computerChoice=="scissors") ||
+     (playerChoice=="paper" && computerChoice=="rock") ||
+     (playerChoice=="scissors" && computerChoice=="paper")) {
+        resultText.textContent = "Player Wins!";
+        playerScore++;
+        playerScoreText.textContent = playerScore;
+  } 
+  else {
+    resultText.textContent = "Computer Wins!";
+    computerScore++;
+    computerScoreText.textContent = computerScore;
+  }
+}
