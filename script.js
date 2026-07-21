@@ -4,6 +4,7 @@ const scissorsButton = document.getElementById("scissors");
 const resultText = document.getElementById("result");
 const playerScoreText = document.getElementById("playerScore");
 const computerScoreText = document.getElementById("computerScore");
+const computerChoiceText = document.getElementById("computerChoiceDisplay");
 
 let playerScore = 0;
 let computerScore = 0;
@@ -17,6 +18,7 @@ function getComputerChoice() {
 
 function playRound(playerChoice) {
   let computerChoice = getComputerChoice();
+  computerChoiceText.textContent = "Computer's choice: " + computerChoice;
 
   if (playerChoice === computerChoice) {
     resultText.textContent = "It's a tie!";

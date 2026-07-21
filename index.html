@@ -7,19 +7,27 @@
     <body>
         <h1>Rock Paper Scissors</h1>
 
-        <div class="scoreboard">
-            <p>You:<span id="playerScore">0</span></p>
-            <p>Computer:<span id="computerScore">0</span></p>
+        <div id="startScreen">
+            <p>Choose your match length:</p>
+            <button id="bestOf3">Best of 3</button>
+            <button id="bestOf5">Best of 5</button>
         </div>
+        <div id="gameScreen">
+          <div class="scoreboard">
+              <p>You:<span id="playerScore">0</span></p>
+              <p>Computer:<span id="computerScore">0</span></p>
+          </div>
 
-        <div class="choices">
-            <button id="rock">Rock</button>
-            <button id="paper">Paper</button>
-            <button id="scissors">Scissors</button>
+          <p id="computerChoiceDisplay">Computer's choice: ?</p>
+        
+          <div class="choices">
+              <button id="rock">Rock</button>
+              <button id="paper">Paper</button>
+              <button id="scissors">Scissors</button>
+          </div>
+        
+          <p id="result">Make your move!</p>
         </div>
-
-        <p id="result">Make your move!</p>
-
         <script src="script.js"></script>
     </body>
 </html>
