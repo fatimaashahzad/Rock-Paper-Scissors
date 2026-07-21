@@ -5,7 +5,12 @@ const resultText = document.getElementById("result");
 const playerScoreText = document.getElementById("playerScore");
 const computerScoreText = document.getElementById("computerScore");
 const computerChoiceText = document.getElementById("computerChoiceDisplay");
+const startScreen=document.getElementById("startScreen");
+const gameScreen=document.getElementById("gameScreen");
+const bestOf3Button=document.getElementById("bestOf3button");
+const bestOf5Button=document.getElementById("bestOf5button");
 
+let winsNeeded = 0;
 let playerScore = 0;
 let computerScore = 0;
 
@@ -47,4 +52,16 @@ paperButton.onclick = function() {
 
 scissorsButton.onclick = function() {
   playRound("scissors");
+};
+
+bestOf3Button.onclick = function() {
+  winsNeeded = 2;
+  startScreen.style.display = "none";
+  gameScreen.style.display = "block";
+};
+
+bestOf5Button.onclick = function() {
+  winsNeeded = 3;
+  startScreen.style.display = "none";
+  gameScreen.style.display = "block";
 };
