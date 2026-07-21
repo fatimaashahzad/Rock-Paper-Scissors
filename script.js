@@ -7,8 +7,8 @@ const computerScoreText = document.getElementById("computerScore");
 const computerChoiceText = document.getElementById("computerChoiceDisplay");
 const startScreen=document.getElementById("startScreen");
 const gameScreen=document.getElementById("gameScreen");
-const bestOf3Button=document.getElementById("bestOf3");
 const bestOf5Button=document.getElementById("bestOf5");
+const bestOf7Button=document.getElementById("bestOf7");
 
 let winsNeeded = 0;
 let playerScore = 0;
@@ -36,6 +36,7 @@ function playRound(playerChoice) {
     playerScoreText.textContent = playerScore;
     if (playerScore === winsNeeded) {
      localStorage.setItem("winner", "Player");
+     localStorage.setItem("finalScore", playerScore + "-" + computerScore);
      window.location.href = "results.html";
    }
   }
@@ -46,11 +47,11 @@ function playRound(playerChoice) {
     computerScoreText.textContent = computerScore;
     if (computerScore === winsNeeded) {
      localStorage.setItem("winner", "Computer");
+     localStorage.setItem("finalScore", playerScore + "-" + computerScore);
      window.location.href = "results.html";
     }
   }
 }
-
 rockButton.onclick = function() {
   playRound("rock");
 };
@@ -63,14 +64,14 @@ scissorsButton.onclick = function() {
   playRound("scissors");
 };
 
-bestOf3Button.onclick = function() {
-  winsNeeded = 2;
+bestOf5Button.onclick = function() {
+  winsNeeded = 3;
   startScreen.style.display = "none";
   gameScreen.style.display = "block";
 };
 
-bestOf5Button.onclick = function() {
-  winsNeeded = 3;
+bestOf7Button.onclick = function() {
+  winsNeeded = 4;
   startScreen.style.display = "none";
   gameScreen.style.display = "block";
 };
