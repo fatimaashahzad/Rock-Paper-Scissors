@@ -7,8 +7,8 @@ const computerScoreText = document.getElementById("computerScore");
 const computerChoiceText = document.getElementById("computerChoiceDisplay");
 const startScreen=document.getElementById("startScreen");
 const gameScreen=document.getElementById("gameScreen");
-const bestOf3Button=document.getElementById("bestOf3button");
-const bestOf5Button=document.getElementById("bestOf5button");
+const bestOf3Button=document.getElementById("bestOf3");
+const bestOf5Button=document.getElementById("bestOf5");
 
 let winsNeeded = 0;
 let playerScore = 0;
@@ -29,16 +29,23 @@ function playRound(playerChoice) {
     resultText.textContent = "It's a tie!";
   } 
   else if ((playerChoice=="rock" && computerChoice=="scissors") ||
-     (playerChoice=="paper" && computerChoice=="rock") ||
-     (playerChoice=="scissors" && computerChoice=="paper")) {
-        resultText.textContent = "Player Wins!";
-        playerScore++;
-        playerScoreText.textContent = playerScore;
-  } 
+    (playerChoice=="paper" && computerChoice=="rock") ||
+    (playerChoice=="scissors" && computerChoice=="paper")) {
+    resultText.textContent = "Player Wins!";
+    playerScore++;
+    playerScoreText.textContent = playerScore;
+    if (playerScore === winsNeeded) {
+     console.log("Match Over! Player won the match!");
+   }
+  }
+   
   else {
     resultText.textContent = "Computer Wins!";
     computerScore++;
     computerScoreText.textContent = computerScore;
+    if (computerScore === winsNeeded) {
+      console.log("Match Over! Computer won the match!");
+    }
   }
 }
 
