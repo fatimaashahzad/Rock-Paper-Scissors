@@ -35,7 +35,8 @@ function playRound(playerChoice) {
     playerScore++;
     playerScoreText.textContent = playerScore;
     if (playerScore === winsNeeded) {
-     console.log("Match Over! Player won the match!");
+     localStorage.setItem("winner", "Player");
+     window.location.href = "results.html";
    }
   }
    
@@ -44,7 +45,8 @@ function playRound(playerChoice) {
     computerScore++;
     computerScoreText.textContent = computerScore;
     if (computerScore === winsNeeded) {
-      console.log("Match Over! Computer won the match!");
+     localStorage.setItem("winner", "Computer");
+     window.location.href = "results.html";
     }
   }
 }
